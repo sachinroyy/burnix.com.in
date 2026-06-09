@@ -7,6 +7,7 @@ import Private from "@/components/Private";
 import Whattokeep from "@/components/Whattokeep";
 import FAQSection from "@/components/faq";
 import ServicesSection from "@/components/ServicePage";
+import BlogsSection from "@/app/blogs/page";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Private /> 
       <BenefitsSection />
       <Whattokeep />
+      <BlogsSection />
       <DocumentsSection />
       <ReviewsSection />
       <FAQSection />

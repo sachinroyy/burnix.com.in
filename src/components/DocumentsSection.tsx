@@ -12,27 +12,27 @@ import {
 const documents = [
   {
     title: 'PAN CARD',
-    image: '/images/PANCARD.webp',
+    image: '/images/b1.webp',
   },
   {
     title: 'PHOTOGRAPH',
-    image: '/images/CAMERA.webp',
+    image: '/images/b2.webp',
   },
   {
     title: 'IDENTITY PROOF',
-    image: '/images/IDCARD.webp',
+    image: '/images/b3.webp',
   },
   {
     title: "DIRECTOR'S ADDRESS PROOF",
-    image: '/images/dir-add.webp',
+    image: '/images/b4.webp',
   },
   {
     title: 'BUSINESS ADDRESS PROOF',
-    image: '/images/map.webp',
+    image: '/images/b5.webp',
   },
   {
     title: 'NOTE',
-    image: '/images/notes.webp',
+    image: '/images/b6.webp',
   },
 ];
 
@@ -74,7 +74,7 @@ export default function DocumentsRequired() {
             <Box
               component="span"
               sx={{
-                color: '#e85d18',
+                color: '#ed3c0a',
               }}
             >
               Documents
@@ -82,10 +82,10 @@ export default function DocumentsRequired() {
             <Box
               component="span"
               sx={{
-                color: 'black',
+                color: '#051932',
               }}
             >
-              required For Private Limited Company Registration
+              Required for Registration
             </Box>
           </Typography>
         </Box>

@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { Grid as Grid2 } from "@mui/system";
 import Link from "next/link";
+import Image from "next/image";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
@@ -43,12 +44,13 @@ export default function Footer() {
           <Grid2 container spacing={5}>
             {/* Logo Section */}
             <Grid2 size={{ xs: 12, md: 4 }}>
-              <Box mb={2}>
-                <img
+              <Box sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' } }}>
+                <Image
                   src="/images/logo.webp"
                   alt="Burnix"
+                  width={220}
+                  height={60}
                   style={{
-                    width: "220px",
                     maxWidth: "100%",
                     objectFit: "contain",
                   }}
@@ -57,9 +59,10 @@ export default function Footer() {
 
               <Typography
                 sx={{
-                  color: "black",
+                  color: "#051932",
                   lineHeight: 1.8,
                   fontSize: "15px",
+                  textAlign: { xs: 'center', md: 'left' },
                 }}
               >
                 Burnix helps startups, entrepreneurs and businesses with
@@ -67,7 +70,7 @@ export default function Footer() {
                 annual compliance and legal solutions across India.
               </Typography>
 
-              <Stack direction="row" spacing={2} mt={4}>
+              <Stack direction="row" spacing={2} sx={{ mt: 4, justifyContent: { xs: 'center', md: 'flex-start' } }}>
                 {[
                   <FacebookIcon key="fb" />,
                   <XIcon key="x" />,
@@ -84,7 +87,7 @@ export default function Footer() {
                       alignItems: "center",
                       justifyContent: "center",
                      
-                      color: "black",
+                      color: "#051932",
                       cursor: "pointer",
                       transition: ".3s",
                       "&:hover": {
@@ -101,42 +104,47 @@ export default function Footer() {
 
             {/* Quick Links */}
             <Grid2 size={{ xs: 12, sm: 6, md: 2.5 }}>
-              <FooterHeading title="Quick Links" />
+              <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+                <FooterHeading title="Quick Links" />
 
-              <FooterLink href="/">Home</FooterLink>
-              <FooterLink href="/about">About Us</FooterLink>
-              <FooterLink href="/services">Services</FooterLink>
-              <FooterLink href="/contact">Contact Us</FooterLink>
+                <FooterLink href="/">Home</FooterLink>
+                <FooterLink href="/about">About Us</FooterLink>
+                <FooterLink href="/services">Services</FooterLink>
+                <FooterLink href="/contact">Contact Us</FooterLink>
+              </Box>
             </Grid2>
 
             {/* Services */}
             <Grid2 size={{ xs: 12, sm: 6, md: 2.5 }}>
-              <FooterHeading title="Services" />
+              <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+                <FooterHeading title="Services" />
 
-              <FooterLink href="/private-limited-company">
-                Pvt Ltd Registration
-              </FooterLink>
+                <FooterLink href="/private-limited-company">
+                  Pvt Ltd Registration
+                </FooterLink>
 
-              <FooterLink href="/gst-registration">
-                GST Registration
-              </FooterLink>
+                <FooterLink href="/gst-registration">
+                  GST Registration
+                </FooterLink>
 
-              <FooterLink href="/trademark-registration">
-                Trademark Registration
-              </FooterLink>
+                <FooterLink href="/trademark-registration">
+                  Trademark Registration
+                </FooterLink>
 
-              <FooterLink href="/annual-compliance">
-                Annual Compliance
-              </FooterLink>
+                <FooterLink href="/annual-compliance">
+                  Annual Compliance
+                </FooterLink>
+              </Box>
             </Grid2>
 
             {/* Contact */}
             <Grid2 size={{ xs: 12, md: 3 }}>
-              <FooterHeading title="Contact Info" />
+              <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+                <FooterHeading title="Contact Info" />
 
               <Typography
                 sx={{
-                  color: "black",
+                  color: "#051932",
                   mb: 2,
                 }}
               >
@@ -145,7 +153,7 @@ export default function Footer() {
 
               <Typography
                 sx={{
-                  color: "black",
+                  color: "#051932",
                   mb: 2,
                 }}
               >
@@ -154,13 +162,14 @@ export default function Footer() {
 
               <Typography
                 sx={{
-                  color: "black",
+                  color: "#051932",
                   lineHeight: 1.8,
                 }}
               >
                 India’s trusted platform for business registration and legal
                 compliance services.
               </Typography>
+              </Box>
             </Grid2>
           </Grid2>
 
@@ -175,15 +184,17 @@ export default function Footer() {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: { xs: 'center', md: 'space-between' },
               alignItems: "center",
               flexWrap: "wrap",
               gap: 2,
+              flexDirection: { xs: 'column', md: 'row' },
+              textAlign: { xs: 'center', md: 'left' },
             }}
           >
             <Typography
               sx={{
-                color: "black",
+                color: "#051932",
               }}
             >
               © {new Date().getFullYear()} Burnix. All Rights Reserved.
@@ -194,7 +205,7 @@ export default function Footer() {
                 href="/privacy-policy"
                 underline="none"
                 sx={{
-                  color: "black",
+                  color: "#051932",
                   "&:hover": {
                     color: "#ff7a1a",
                   },
@@ -207,7 +218,7 @@ export default function Footer() {
                 href="/terms-condition"
                 underline="none"
                 sx={{
-                  color: "black",
+                  color: "#051932",
                   "&:hover": {
                     color: "#ff7a1a",
                   },
@@ -231,15 +242,17 @@ function FooterHeading({ title }: { title: string }) {
       sx={{
         fontSize: "20px",
         fontWeight: 700,
-        color: "black",
+        color: "#051932",
         mb: 3,
         position: "relative",
+        textAlign: { xs: 'center', md: 'left' },
 
         "&::after": {
           content: '""',
           position: "absolute",
           bottom: -8,
-          left: 0,
+          left: { xs: '50%', md: 0 },
+          transform: { xs: 'translateX(-50%)', md: 'none' },
           width: 40,
           height: 3,
           borderRadius: "20px",
@@ -267,7 +280,7 @@ function FooterLink({
       sx={{
         display: "block",
         mb: 1.5,
-        color: "black",
+        color: "#051932",
         transition: ".3s",
         "&:hover": {
           color: "#ff7a1a",

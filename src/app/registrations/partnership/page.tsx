@@ -33,7 +33,7 @@ export default function PartnershipPage() {
         Registration Process
       </Typography>
       <Typography variant="body1" sx={{ mb: 4 }}>
-        Our process includes drafting partnership deed, obtaining PAN for firm, registration with Registrar of Firms (optional but recommended), GST registration, and opening bank account in firm's name.
+        Our process includes drafting partnership deed, obtaining PAN for firm, registration with Registrar of Firms (optional but recommended), GST registration, and opening bank account in firm name.
       </Typography>
 
       <Box sx={{ textAlign: 'center', mt: 6 }}>

@@ -1,7 +1,7 @@
 export const navData = [
   {
     label: 'Registrations',
-    href: '/registrations',
+   
     megaMenu: [
       {
         title: 'Company Registration',
@@ -84,7 +84,7 @@ export const navData = [
       {
         title: 'Consultation Services',
         items: [
-          { label: 'Legal Consultation', href: '/consultation/legal' },
+          // { label: 'Legal Consultation', href: '/consultation/legal' },
           { label: 'Business Consultation', href: '/consultation/business' },
           { label: 'Tax Consultation', href: '/consultation/tax' },
           { label: 'Compliance Consultation', href: '/consultation/compliance' },
@@ -108,7 +108,7 @@ export const navData = [
     ],
   },
   {
-    label: 'Contact',
+    label: 'Contact Us',
     href: '/contact',
     megaMenu: [
       {

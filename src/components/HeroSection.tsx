@@ -10,7 +10,7 @@ import {
   Button,
   Paper,
 } from '@mui/material';
-import Grid from '@mui/material/Grid';
+import { Grid as Grid2 } from '@mui/system';
 
 export default function HeroSection() {
   const [formData, setFormData] = useState({
@@ -32,7 +32,12 @@ export default function HeroSection() {
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
-    console.log(formData);
+    
+    const message = `New Consultation Request:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}`;
+    const whatsappNumber = '9105907227';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -61,16 +66,16 @@ export default function HeroSection() {
 >
     
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
-        <Grid
+        <Grid2
           container
           spacing={4}
-          alignItems="center"
           sx={{
             minHeight: '100vh',
+            alignItems: 'center',
           }}
         >
           {/* LEFT CONTENT */}
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid2 size={{ xs: 12, md: 4 }}>
             <Box
               sx={{
                 textAlign: 'center',
@@ -91,11 +96,11 @@ export default function HeroSection() {
                   lineHeight: 1.1,
                 }}
               >
-                Transform
+                Elevate
                 <br />
-                Your Digital
+                Your Business
                 <br />
-                Presence
+                Growth
               </Typography>
 
               <Typography
@@ -129,14 +134,14 @@ export default function HeroSection() {
                 <Button
                   variant="contained"
                   sx={{
-                    bgcolor: '#e85d18',
-                    color: '#000',
+                    bgcolor: '#ed3c0a',
+                    color: '#051932',
                     px: 4,
                     py: 1.5,
                     fontWeight: 700,
                     borderRadius: 3,
                     '&:hover': {
-                      bgcolor: '#e85d18',
+                      bgcolor: '#ed3c0a',
                     },
                   }}
                 >
@@ -155,10 +160,10 @@ export default function HeroSection() {
                 </Button>
               </Box>
             </Box>
-          </Grid>
+          </Grid2>
 
           {/* CENTER IMAGE */}
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid2 size={{ xs: 12, md: 4 }}>
             <Box
               sx={{
                 display: 'flex',
@@ -173,11 +178,12 @@ export default function HeroSection() {
                 
                 sx={{
                   width: {
-                    xs: '100%',
-                    sm: '100%',
-                    md: '120%',
+                    xs: '120%',
+                    sm: '110%',
+                    md: '110%',
                     lg: '290%',
                   },
+                   
                   maxWidth: '1250px',
                   height: 'auto',
                   objectFit: 'contain',
@@ -185,10 +191,10 @@ export default function HeroSection() {
                 }}
               />
             </Box>
-          </Grid>
+          </Grid2>
 
           {/* RIGHT FORM */}
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid2 size={{ xs: 12, md: 4 }}>
             <Paper
               elevation={0}
               component="form"
@@ -227,7 +233,7 @@ export default function HeroSection() {
                   mb: 3,
                 }}
               >
-                Let's discuss your project
+                Let discuss your project
               </Typography>
 
               <TextField
@@ -264,20 +270,20 @@ export default function HeroSection() {
                 sx={{
                   mt: 3,
                   py: 1.7,
-                  bgcolor: '#e85d18',
-                  color: '#000',
+                  bgcolor: '#ed3c0a',
+                  color: '#051932',
                   fontWeight: 700,
                   borderRadius: 3,
                   '&:hover': {
-                    bgcolor: '#e85d18',
+                    bgcolor: '#ed3c0a',
                   },
                 }}
               >
                 Submit
               </Button>
             </Paper>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
       </Container>
     </Box>
   );

@@ -8,7 +8,7 @@ export default function OPCPage() {
       </Typography>
       
       <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#4a5568', mb: 4 }}>
-        A One Person Company allows a single individual to operate a corporate entity with limited liability protection. It's perfect for solo entrepreneurs and small business owners.
+        A One Person Company allows a single individual to operate a corporate entity with limited liability protection. It perfect for solo entrepreneurs and small business owners.
       </Typography>
 
       <Box sx={{ mb: 4, p: 3, bgcolor: '#f7fafc', borderRadius: 2 }}>

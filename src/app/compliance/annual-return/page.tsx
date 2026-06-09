@@ -8,7 +8,7 @@ export default function AnnualReturnPage() {
       </Typography>
       
       <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#4a5568', mb: 4 }}>
-        Annual Return filing is mandatory for all registered companies in India. It provides a comprehensive overview of the company's financial and operational activities during the financial year.
+        Annual Return filing is mandatory for all registered companies in India. It provides a comprehensive overview of the company financial and operational activities during the financial year.
       </Typography>
 
       <Box sx={{ mb: 4, p: 3, bgcolor: '#f7fafc', borderRadius: 2 }}>
@@ -25,7 +25,7 @@ export default function AnnualReturnPage() {
           Documents Required
         </Typography>
         <Typography variant="body1" sx={{ mb: 2 }}>
-          Financial statements, auditor's report, board of directors' report, list of shareholders and directors, details of changes in shareholding, and compliance certificates.
+          Financial statements, auditor report, board of directors&apos; report, list of shareholders and directors, details of changes in shareholding, and compliance certificates.
         </Typography>
       </Box>
 

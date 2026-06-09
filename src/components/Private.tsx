@@ -13,23 +13,23 @@ import Grid from '@mui/material/Grid';
 const steps = [
   {
     number: '01',
-    image: '/images/Docs.webp',
-    title: 'Fill up the forms',
+    image: '/images/c1.webp',
+    title: 'Complete Application',
   },
   {
     number: '02',
-    image: '/images/submit.webp',
-    title: 'Submit the Documents',
+    image: '/images/c2.webp',
+    title: 'Upload Documents',
   },
   {
     number: '03',
-    image: '/images/wallet.webp',
-    title: 'Pay Fees',
+    image: '/images/c3.webp',
+    title: 'Make Payment',
   },
   {
     number: '04',
-    image: '/images/certificate_edited.webp',
-    title: 'Get your Company Registered',
+    image: '/images/c4.webp',
+    title: 'Receive Certificate',
   },
 ];
 
@@ -74,20 +74,20 @@ export default function RegistrationSteps() {
       lineHeight: 1.2,
     }}
   >
-    Private Limited Company Registration In
+    Register Your Company In
   </Typography>
 
   <Typography
     sx={{
       fontWeight: 800,
-      color: '#e85d18',
+      color: '#ed3c0a',
       fontSize: {
         xs: '2rem',
         md: '3.8rem',
       },
     }}
   >
-    4 Easy Steps
+    4 Simple Steps
   </Typography>
 </Box>
 
@@ -106,21 +106,23 @@ export default function RegistrationSteps() {
         >
           {steps.map((step, index) => (
             <React.Fragment key={index}>
-              <Box textAlign="center">
+              <Box sx={{ textAlign: 'center' }}>
                 {/* Number Circle */}
 
                 <Box
                   sx={{
+                    
+                    alignItems: 'center', 
                     width: 90,
                     height: 90,
                     borderRadius: '50%',
-                    background: '#e85d18',
+                    background: '#ed3c0a',
                     color: '#fff',
                     fontWeight: 700,
                     fontSize: '2rem',
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center',
+                   
                     mx: 'auto',
                     mb: 4,
                   }}
@@ -155,10 +157,13 @@ export default function RegistrationSteps() {
                       src={step.image}
                       alt={step.title}
                       sx={{
+                        
                         width: 100,
                         height: 100,
                         objectFit: 'contain',
                         mb: 2,
+                        display: 'block',
+                        mx: 'auto',
                       }}
                     />
 
@@ -180,7 +185,7 @@ export default function RegistrationSteps() {
                 <Box
                   sx={{
                     mt: 3,
-                    color: '#e85d18',
+                    color: '#ed3c0a',
                     fontSize: '4rem',
                     fontWeight: 700,
                   }}
@@ -209,7 +214,7 @@ export default function RegistrationSteps() {
               key={step.number}
               size={{ xs: 12 }}
             >
-              <Box textAlign="center">
+              <Box sx={{ textAlign: 'center' }}>
                 <Box
                   sx={{
                     width: 80,
@@ -281,19 +286,19 @@ export default function RegistrationSteps() {
             gap: 3,
           }}
         >
-          <Typography fontWeight={600}>
+          <Typography sx={{ fontWeight: 600 }}>
             ✅ 100% Legal & Compliant
           </Typography>
 
-          <Typography fontWeight={600}>
+          <Typography sx={{ fontWeight: 600 }}>
             ⚡ Quick & Hassle-Free Process
           </Typography>
 
-          <Typography fontWeight={600}>
+          <Typography sx={{ fontWeight: 600 }}>
             🎧 Expert Guidance at Every Step
           </Typography>
 
-          <Typography fontWeight={600}>
+          <Typography sx={{ fontWeight: 600 }}>
             🔒 Secure & Confidential
           </Typography>
         </Box>

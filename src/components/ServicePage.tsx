@@ -7,10 +7,26 @@ import {
   Card,
   CardContent,
   Button,
-  Grid,
 } from '@mui/material';
+import { Grid as Grid2 } from '@mui/system';
 
-const services = [
+interface ServicePageProps {
+  title?: string;
+  description?: string;
+  sections?: Array<{
+    title: string;
+    content: string;
+  }>;
+}
+
+interface Service {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  content?: string;
+}
+
+const defaultServices: Service[] = [
   {
     title: 'LLP',
     subtitle: 'Registration',
@@ -49,7 +65,8 @@ const services = [
   },
 ];
 
-export default function ServicesSection() {
+export default function ServicesSection({ title, description, sections }: ServicePageProps) {
+  const services: Service[] = sections || defaultServices;
   return (
     <Box
       sx={{
@@ -77,7 +94,7 @@ export default function ServicesSection() {
                    <Box
                      component="span"
                      sx={{
-                       color: 'black',
+                       color: '#051932',
                      }}
                    >
                      Our    
@@ -85,7 +102,7 @@ export default function ServicesSection() {
                    <Box
                      component="span"
                      sx={{
-                       color: '#e85d18',
+                       color: '#ed3c0a',
                      }}
                    >
                      Services
@@ -93,19 +110,16 @@ export default function ServicesSection() {
                  </Typography>
                </Box>
 
-        <Grid container spacing={4}>
+        <Grid2 container spacing={4}>
           {services.map((service, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={4}
+            <Grid2
+              size={{ xs: 12, sm: 6, md: 4 }}
               key={index}
-              display="flex"
+              sx={{ display: 'flex' }}
             >
               <Card
                 sx={{
-                  width: '350px',
+                  width: '270px',
                   height: '300px',
                   borderRadius: 3,
                   boxShadow:
@@ -131,47 +145,52 @@ export default function ServicesSection() {
                 >
                   <Box>
                     <Typography
-                      variant="h5"
-                      align="center"
-                      fontWeight={700}
-                      gutterBottom
+                      sx={{
+                        textAlign: 'center',
+                        fontWeight: 700,
+                        mb: 2,
+                      }}
                     >
                       {service.title}
                     </Typography>
 
-                    <Typography
-                      align="center"
-                      fontWeight={600}
-                      color="text.secondary"
-                      mb={3}
-                    >
-                      {service.subtitle}
-                    </Typography>
+                    {service.subtitle && (
+                      <Typography
+                        sx={{
+                          textAlign: 'center',
+                          fontWeight: 600,
+                          color: 'text.secondary',
+                          mb: 3,
+                        }}
+                      >
+                        {service.subtitle}
+                      </Typography>
+                    )}
 
                     <Typography
-                      align="center"
-                      color="text.secondary"
                       sx={{
+                        textAlign: 'center',
+                        color: 'text.secondary',
                         minHeight: 90,
                         lineHeight: 1.8,
                       }}
                     >
-                      {service.description}
+                      {service.content || service.description}
                     </Typography>
                   </Box>
 
-                  <Box mt={3}>
+                  <Box sx={{ mt: 3 }}>
                     <Button
                       variant="contained"
                       fullWidth
                       sx={{
-                        backgroundColor: '#e85d18',
+                        backgroundColor: '#ed3c0a',
                         borderRadius: 2,
                         fontWeight: 700,
                         py: 1.2,
                         textTransform: 'uppercase',
                         '&:hover': {
-                          backgroundColor: '#e85d18',
+                          backgroundColor: '#ed3c0a',
                         },
                       }}
                     >
@@ -180,9 +199,9 @@ export default function ServicesSection() {
                   </Box>
                 </CardContent>
               </Card>
-            </Grid>
+            </Grid2>
           ))}
-        </Grid>
+        </Grid2>
       </Container>
     </Box>
   );

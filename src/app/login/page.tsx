@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Box,
   Container,
@@ -16,6 +17,7 @@ import { Grid as Grid2 } from '@mui/system';
 import LockIcon from '@mui/icons-material/Lock';
 
 export default function LoginPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -34,8 +36,16 @@ export default function LoginPage() {
       setError('Please fill in all fields');
       return;
     }
-    console.log('Login attempt:', formData);
-    // Handle login
+
+    // Hardcoded credentials
+    if (formData.email === 'sachincy8899@gmail.com' && formData.password === '11111111') {
+      // Store authentication in localStorage
+      localStorage.setItem('isAuthenticated', 'true');
+      localStorage.setItem('userEmail', formData.email);
+      router.push('/dashboard');
+    } else {
+      setError('Invalid email or password');
+    }
   };
 
   return (
@@ -132,7 +142,7 @@ export default function LoginPage() {
 
                 {/* Footer Links */}
                 <Typography variant="body2" sx={{ textAlign: 'center', mt: 3, color: '#666' }}>
-                  Don't have an account?{' '}
+                  Dont have an account?{' '}
                   <Box
                     component="a"
                     href="#"

@@ -11,28 +11,28 @@ import {
 
 const benefits = [
   {
-    title: 'Limited Liability Protection to Directors personal assets',
-    image: '/images/liability.webp',
+    title: 'Protect Your Personal Assets',
+    image: '/images/P1.webp',
   },
   {
-    title: 'Better image and credibility in Market',
-    image: '/images/businessman.webp',
+    title: 'Build Trust & Credibility',
+    image: '/images/P2.webp',
   },
   {
-    title: 'Easy to raise fund, capital and loans',
-    image: '/images/funding.webp',
+    title: 'Easy Access to Funding',
+    image: '/images/P3.webp',
   },
   {
-    title: 'Favorite Business structure for Investors',
-    image: '/images/favo.webp',
+    title: 'Attract Top Investors',
+    image: '/images/P4.webp',
   },
   {
-    title: 'Easy to attract Employees and workers',
-    image: '/images/easytoattract.webp',
+    title: 'Hire & Retain Talent',
+    image: '/images/P5.webp',
   },
   {
-    title: 'Quite easy to sell and deal with',
-    image: '/images/sell.webp',
+    title: 'Smooth Business Transfer',
+    image: '/images/P6.webp',
   },
 ];
 
@@ -55,7 +55,7 @@ export default function BenefitsSection() {
       >
         {/* Heading */}
 
-        <Box textAlign="center"   mb={8}>
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography
             sx={{
               textAlign: 'center',
@@ -71,13 +71,13 @@ export default function BenefitsSection() {
             <Box
               component="span"
               sx={{
-                color: '#e85d18',
+                color: '#ed3c0a',
                 
               }}
             >
               Benefits
             </Box>{' '}
-            of Private Limited Company Registration
+            of Company Registration
           </Typography>
         </Box>
 

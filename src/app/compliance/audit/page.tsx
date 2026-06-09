@@ -8,7 +8,7 @@ export default function AuditPage() {
       </Typography>
       
       <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#4a5568', mb: 4 }}>
-        Statutory audit is mandatory for companies meeting certain thresholds. It ensures financial statements present a true and fair view of the company's financial position.
+        Statutory audit is mandatory for companies meeting certain thresholds. It ensures financial statements present a true and fair view of the company financial position.
       </Typography>
 
       <Box sx={{ mb: 4, p: 3, bgcolor: '#f7fafc', borderRadius: 2 }}>

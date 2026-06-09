@@ -8,7 +8,7 @@ export default function SupportPage() {
       </Typography>
       
       <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#4a5568', mb: 4 }}>
-        Our dedicated customer support team is here to assist you with any questions or concerns. We're committed to providing excellent service and ensuring your satisfaction.
+        Our dedicated customer support team is here to assist you with any questions or concerns. We&apos;re committed to providing excellent service and ensuring your satisfaction.
       </Typography>
 
       <Box sx={{ mb: 4, p: 3, bgcolor: '#f7fafc', borderRadius: 2 }}>
@@ -16,7 +16,7 @@ export default function SupportPage() {
           Support Services
         </Typography>
         <Typography variant="body1" sx={{ mb: 2 }}>
-          General inquiries, service-related questions, document status updates, payment assistance, and technical support for our online services. We're here to help at every step.
+          General inquiries, service-related questions, document status updates, payment assistance, and technical support for our online services. We&apos;re here to help at every step.
         </Typography>
       </Box>
 

@@ -106,7 +106,7 @@ export default function FAQSection() {
             <Box
               component="span"
               sx={{
-                color: '#e85d18',
+                color: '#ed3c0a',
               }}
             >
               Questions

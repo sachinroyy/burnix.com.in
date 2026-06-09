@@ -9,24 +9,24 @@ import {
 
 const requirements = [ 
   {
-    title: 'Minimum Two Directors',
+    title: 'Two Directors Required',
     icon: '/images/guide.webp',
-    desc: 'A Private Limited Company must have at least two directors. One of the directors should be an Indian resident as per regulatory requirements.',
+    desc: 'Your company needs at least two directors. One must be an Indian resident to meet regulatory standards.',
   },
   {
     title: 'Unique Company Name',
     icon: '/images/guide.webp',
-    desc: 'Your company name should be unique and must not match any existing company or registered trademark in India.',
+    desc: 'Choose a distinctive name that does not conflict with existing companies or trademarks in India.',
   },
   {
-    title: 'Registered Office Address',
+    title: 'Office Address',
     icon: '/images/guide.webp',
-    desc: 'A valid registered office address is required to receive official government communication and legal notices.',
+    desc: 'Provide a valid registered office address for official government communications and legal notices.',
   },
   {
-    title: 'Authorized Capital',
+    title: 'Capital Structure',
     icon: '/images/guide.webp',
-    desc: 'Choose a suitable authorized capital based on your business objectives and future expansion plans.',
+    desc: 'Determine your authorized capital based on business goals and future expansion plans.',
   },
 ];
 
@@ -50,10 +50,11 @@ export default function CompanyRegistrationRequirements() {
       >
         {/* Heading */}
 
-        <Box textAlign="center" mb={10}>
+        <Box sx={{ textAlign: 'center', mb: 10 }}>
           <Typography
             sx={{
               fontWeight: 800,
+              textAlign: 'center',
               fontSize: {
                 xs: '2rem',
                 md: '3.2rem',
@@ -61,13 +62,14 @@ export default function CompanyRegistrationRequirements() {
               lineHeight: 1.2,
             }}
           >
-            What To Keep In Mind Before
+            Key Requirements Before
           </Typography>
 
           <Typography
             sx={{
               fontWeight: 800,
-              color: '#e85d18',
+              textAlign: 'center',
+              color: '#ed3c0a',
               fontSize: {
                 xs: '2rem',
                 md: '3.2rem',
@@ -75,7 +77,7 @@ export default function CompanyRegistrationRequirements() {
               mb: 2,
             }}
           >
-            Private Limited Company Registration
+            Company Registration
           </Typography>
 
           <Typography
@@ -87,8 +89,7 @@ export default function CompanyRegistrationRequirements() {
               lineHeight: 1.8,
             }}
           >
-            Ensure all important requirements are fulfilled before starting
-            your company registration journey.
+            Make sure you have everything ready before starting your registration journey.
           </Typography>
         </Box>
 
@@ -110,7 +111,7 @@ export default function CompanyRegistrationRequirements() {
               top: 0,
               bottom: 0,
               width: '8px',
-              bgcolor: '#e85d18',
+              bgcolor: '#ed3c0a',
               transform: 'translateX(-50%)',
               borderRadius: '50px',
               display: {
@@ -198,7 +199,7 @@ export default function CompanyRegistrationRequirements() {
                   },
                   borderRadius: '50%',
                   backgroundColor: '#fff',
-                  border: '10px solid #e85d18',
+                  border: '10px solid #ed3c0a',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',

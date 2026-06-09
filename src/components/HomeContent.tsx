@@ -244,7 +244,7 @@ export default function HomeContent() {
                   <CardContent>
                     <Rating value={testimonial.rating} readOnly sx={{ mb: 2 }} />
                     <Typography variant="body1" sx={{ mb: 2, fontStyle: 'italic' }}>
-                      "{testimonial.text}"
+                      {testimonial.text}
                     </Typography>
                     <Stack sx={{ direction: 'row', spacing: 2, alignItems: 'center' }}>
                       <Avatar sx={{ bgcolor: '#f5a623' }}>

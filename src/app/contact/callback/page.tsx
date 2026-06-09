@@ -8,7 +8,7 @@ export default function CallbackPage() {
       </Typography>
       
       <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#4a5568', mb: 4 }}>
-        Fill out the form below and our team will call you back at your convenience. We're here to help with all your legal and business service needs.
+        Fill out the form below and our team will call you back at your convenience. We&apos;re here to help with all your legal and business service needs.
       </Typography>
 
       <Box sx={{ mb: 4, p: 3, bgcolor: '#f7fafc', borderRadius: 2 }}>
@@ -16,7 +16,7 @@ export default function CallbackPage() {
           What to Expect
         </Typography>
         <Typography variant="body1" sx={{ mb: 2 }}>
-          Our team will review your request and call you back within 24 hours. We'll discuss your requirements and provide expert guidance on the best solutions for your needs.
+          Our team will review your request and call you back within 24 hours. We&apos;ll discuss your requirements and provide expert guidance on the best solutions for your needs.
         </Typography>
       </Box>
 
@@ -33,7 +33,7 @@ export default function CallbackPage() {
         Alternative Contact Methods
       </Typography>
       <Typography variant="body1" sx={{ mb: 4 }}>
-        If you prefer, you can also reach us via email or visit our office. We're available Monday through Saturday during business hours for all your inquiries.
+        If you prefer, you can also reach us via email or visit our office. We&apos;re available Monday through Saturday during business hours for all your inquiries.
       </Typography>
 
       <Box sx={{ textAlign: 'center', mt: 6 }}>

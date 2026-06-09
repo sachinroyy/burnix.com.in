@@ -16,7 +16,7 @@ export default function CareersPage() {
           Why Work With Us
         </Typography>
         <Typography variant="body1" sx={{ mb: 2 }}>
-          Competitive salary and benefits, professional development opportunities, collaborative work culture, exposure to diverse projects, and the chance to make a real impact on our clients' success.
+          Competitive salary and benefits, professional development opportunities, collaborative work culture, exposure to diverse projects, and the chance to make a real impact on our clients success.
         </Typography>
       </Box>
 

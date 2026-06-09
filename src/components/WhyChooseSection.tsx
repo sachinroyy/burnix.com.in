@@ -12,19 +12,19 @@ import {
 const features = [
   {
     title: '5 STAR RATING',
-    image: '/images/star.webp',
+    image: '/images/s1.webp',
   },
   {
     title: '300+ SERVICES',
-    image: '/images/services.webp',
+    image: '/images/s2.webp',
   },
   {
     title: 'REASONABLE PRICE',
-    image: '/images/reasonable.webp',
+    image: '/images/s3.webp',
   },
   {
     title: 'TURN AROUND TIME',
-    image: '/images/time.webp',
+    image: '/images/s4.webp',
   },
 ];
 
@@ -90,7 +90,7 @@ export default function WhyChooseBurnix() {
             <Box
               component="span"
               sx={{
-                color: '#e85d18',
+                color: '#ed3c0a',
               }}
             >
               Burnix?
@@ -205,7 +205,7 @@ export default function WhyChooseBurnix() {
             <Box
               component="span"
               sx={{
-                color: 'black',
+                color: '#051932',
               }}
             >
               Our Trusted
@@ -213,7 +213,7 @@ export default function WhyChooseBurnix() {
             <Box
               component="span"
               sx={{
-                color: '#e85d18',
+                color: '#ed3c0a',
               }}
             >
               Partners

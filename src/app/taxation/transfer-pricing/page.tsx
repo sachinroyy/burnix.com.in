@@ -8,7 +8,7 @@ export default function TransferPricingPage() {
       </Typography>
       
       <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#4a5568', mb: 4 }}>
-        Transfer pricing services for multinational companies with cross-border transactions. We ensure compliance with arm's length principle and documentation requirements.
+        Transfer pricing services for multinational companies with cross-border transactions. We ensure compliance with arm length principle and documentation requirements.
       </Typography>
 
       <Box sx={{ mb: 4, p: 3, bgcolor: '#f7fafc', borderRadius: 2 }}>

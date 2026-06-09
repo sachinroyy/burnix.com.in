@@ -33,7 +33,7 @@ export default function TeamPage() {
         Join Our Team
       </Typography>
       <Typography variant="body1" sx={{ mb: 4 }}>
-        We are always looking for talented individuals who share our passion for excellence. If you're interested in joining our team, explore our career opportunities.
+        We are always looking for talented individuals who share our passion for excellence. If you re interested in joining our team, explore our career opportunities.
       </Typography>
 
       <Box sx={{ textAlign: 'center', mt: 6 }}>

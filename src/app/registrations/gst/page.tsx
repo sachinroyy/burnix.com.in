@@ -8,7 +8,7 @@ export default function GSTPage() {
       </Typography>
       
       <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#4a5568', mb: 4 }}>
-        GST Registration is mandatory for businesses with annual turnover exceeding ₹40 lakhs. It's a comprehensive indirect tax on manufacture, sale, and consumption of goods and services.
+        GST Registration is mandatory for businesses with annual turnover exceeding ₹40 lakhs. It a comprehensive indirect tax on manufacture, sale, and consumption of goods and services.
       </Typography>
 
       <Box sx={{ mb: 4, p: 3, bgcolor: '#f7fafc', borderRadius: 2 }}>

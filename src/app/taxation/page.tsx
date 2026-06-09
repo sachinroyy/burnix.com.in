@@ -16,7 +16,7 @@ export default function TaxationPage() {
     },
     {
       title: 'Transfer Pricing',
-      content: `For businesses with international transactions, we provide transfer pricing services to ensure compliance with arm's length principle. We prepare transfer pricing documentation and help you navigate complex international tax regulations.`,
+      content: `For businesses with international transactions, we provide transfer pricing services to ensure compliance with arm length principle. We prepare transfer pricing documentation and help you navigate complex international tax regulations.`,
     },
     {
       title: 'Goods and Services Tax (GST)',

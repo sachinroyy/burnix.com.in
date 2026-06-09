@@ -10,7 +10,6 @@ import {
   Card,
   CardContent,
   Stack,
-  Alert,
 } from '@mui/material';
 import { Grid as Grid2 } from '@mui/system';
 import EmailIcon from '@mui/icons-material/Email';
@@ -33,8 +32,23 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Contact form submitted:', formData);
-    // Handle form submission
+    
+    // Format the message for WhatsApp
+    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919105907227'; // Replace with your WhatsApp number
+    const message = `*New Contact Form Submission*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone || 'Not provided'}%0A*Subject:* ${formData.subject}%0A%0A*Message:*%0A${formData.message}`;
+    
+    // Open WhatsApp with pre-filled message
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Optional: Clear form after submission
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+    });
   };
 
   return (
@@ -52,7 +66,7 @@ export default function ContactPage() {
             Get in Touch
           </Typography>
           <Typography variant="h6" sx={{ fontWeight: 300, fontSize: '1.1rem' }}>
-            We're here to help and answer any questions you might have
+            We&apos;re here to help and answer any questions you might have
           </Typography>
         </Container>
       </Box>

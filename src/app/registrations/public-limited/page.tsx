@@ -8,7 +8,7 @@ export default function PublicLimitedPage() {
       </Typography>
       
       <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#4a5568', mb: 4 }}>
-        A Public Limited Company can raise capital from the general public through shares and debentures. It's ideal for large-scale businesses looking to expand and list on stock exchanges.
+        A Public Limited Company can raise capital from the general public through shares and debentures. It ideal for large-scale businesses looking to expand and list on stock exchanges.
       </Typography>
 
       <Box sx={{ mb: 4, p: 3, bgcolor: '#f7fafc', borderRadius: 2 }}>
