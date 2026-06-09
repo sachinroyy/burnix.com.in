@@ -17,6 +17,7 @@ interface Blog {
   title: string;
   description?: string;
   content?: string;
+  imageUrl?: string;
   image?: string;
   thumbnail?: string;
   slug?: string;
@@ -88,7 +89,7 @@ export default function BlogsPage() {
       <Grid2 container spacing={{ xs: 2, sm: 3, md: 4 }} sx={{ justifyContent: 'center' }}>
         {blogs.map((blog) => (
           <Grid2
-            size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
+            size={{ xs: 12, md: 6 }}
             key={blog._id}
           >
          <Card
@@ -110,6 +111,7 @@ export default function BlogsPage() {
               <CardMedia
                 component="img"
                 image={
+                  blog.imageUrl ||
                   blog.image ||
                   blog.thumbnail ||
                   '/images/blog-placeholder.jpg'

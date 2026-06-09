@@ -67,7 +67,7 @@ export default function Navbar() {
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Image src="/images/logo.webp" alt="Legal Services" width={40} height={40} />
+                <Image src="/images/logo.webp" alt="Legal Services" width={120} height={120} />
               </Box>
             </Link>
 
