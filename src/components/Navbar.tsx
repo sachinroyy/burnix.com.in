@@ -69,7 +69,7 @@ export default function Navbar() {
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Image src="/images/logo.webp" alt="Legal Services" width={120} height={120} />
               </Box>
-            </Link>
+            </Link> 
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1, alignItems: 'center' }}>
             {navData.map((item) => (

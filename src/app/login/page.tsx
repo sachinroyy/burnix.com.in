@@ -38,7 +38,7 @@ export default function LoginPage() {
     }
 
     // Hardcoded credentials
-    if (formData.email === 'sachincy8899@gmail.com' && formData.password === '11111111') {
+    if (formData.email === 'bernix1520@gmail.com' && formData.password === '9105907227') {
       // Store authentication in localStorage
       localStorage.setItem('isAuthenticated', 'true');
       localStorage.setItem('userEmail', formData.email);

@@ -291,7 +291,7 @@ export default function RegistrationSteps() {
           </Typography>
 
           <Typography sx={{ fontWeight: 600 }}>
-            ⚡ Quick & Hassle-Free Process
+            ⚡ Quick & Hassle-Free Process  
           </Typography>
 
           <Typography sx={{ fontWeight: 600 }}>

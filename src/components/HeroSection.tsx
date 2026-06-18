@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -19,81 +18,62 @@ export default function HeroSection() {
     phone: '',
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
     const message = `New Consultation Request:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}`;
     const whatsappNumber = '9105907227';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    
     window.open(whatsappUrl, '_blank');
   };
 
   return (
-  <Box
-  sx={{
-    px: '10%',
-    minHeight: '100vh',
-    backgroundImage: 'url("/images/herosection.webp")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'flex-start',
-    pt: { xs: 8, md: 12 },
-    '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      
-    },
-  }}
->
-    
+    <Box
+      sx={{
+        px: { xs: '4%', sm: '6%', md: '10%' },
+        minHeight: '100vh',
+        backgroundImage: 'url("/images/herosection.webp")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'flex-start',
+        pt: { xs: '100px', sm: '102px', md: 4, lg: 6 },
+        pb: { xs: 6, md: 0 },
+      }}
+    >
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
         <Grid2
           container
-          spacing={4}
-          sx={{
-            minHeight: '100vh',
-            alignItems: 'center',
-          }}
+          spacing={{ xs: 3, md: 4 }}
+          sx={{ minHeight: '100vh', alignItems: 'center' }}
         >
-          {/* LEFT CONTENT */}
+          {/* ── LEFT: Heading + CTA ── */}
           <Grid2 size={{ xs: 12, md: 4 }}>
             <Box
               sx={{
-                textAlign: 'center',
+                textAlign: { xs: 'center', md: 'left' },
                 position: 'relative',
                 zIndex: 3,
                 mr: { md: '-15%' },
               }}
             >
               <Typography
+                component="h1"
                 sx={{
                   fontSize: {
-                    xs: '2.5rem',
-                    sm: '3rem',
-                    md: '4rem',
-                    lg: '5rem',
+                    xs: '2rem',
+                    sm: '2.6rem',
+                    md: '3.2rem',
+                    lg: '4rem',
+                    xl: '5rem',
                   },
                   fontWeight: 800,
-                  lineHeight: 1.1,
+                  lineHeight: 1.15,
                 }}
               >
                 Elevate
@@ -105,30 +85,26 @@ export default function HeroSection() {
 
               <Typography
                 sx={{
-                  mt: 3,
+                  mt: { xs: 2, md: 3 },
                   color: '#666',
-                  fontSize: '1rem',
+                  fontSize: { xs: '0.9rem', sm: '1rem' },
                   maxWidth: '500px',
-                  mx: {
-                    xs: 'auto',
-                    md: 0,
-                  },
+                  mx: { xs: 'auto', md: 0 },
+                  lineHeight: 1.7,
                 }}
               >
-                We build Websites, Mobile Apps,
-                ERP Systems, CRM Solutions,
-                E-Commerce Platforms and
-                complete Digital Transformation
+                We build Websites, Mobile Apps, ERP Systems, CRM Solutions,
+                E-Commerce Platforms and complete Digital Transformation
                 services for modern businesses.
               </Typography>
 
               <Box
                 sx={{
-                  mt: 4,
+                  mt: { xs: 3, md: 4 },
                   display: 'flex',
                   gap: 2,
                   flexWrap: 'wrap',
-                  justifyContent: 'center',
+                  justifyContent: { xs: 'center', md: 'flex-start' },
                 }}
               >
                 <Button
@@ -136,13 +112,12 @@ export default function HeroSection() {
                   sx={{
                     bgcolor: '#ed3c0a',
                     color: '#051932',
-                    px: 4,
+                    px: { xs: 3, md: 4 },
                     py: 1.5,
                     fontWeight: 700,
                     borderRadius: 3,
-                    '&:hover': {
-                      bgcolor: '#ed3c0a',
-                    },
+                    fontSize: { xs: '0.85rem', md: '1rem' },
+                    '&:hover': { bgcolor: '#c9330a' },
                   }}
                 >
                   Get Started
@@ -151,9 +126,10 @@ export default function HeroSection() {
                 <Button
                   variant="outlined"
                   sx={{
-                    px: 4,
+                    px: { xs: 3, md: 4 },
                     py: 1.5,
                     borderRadius: 3,
+                    fontSize: { xs: '0.85rem', md: '1rem' },
                   }}
                 >
                   Our Services
@@ -162,8 +138,11 @@ export default function HeroSection() {
             </Box>
           </Grid2>
 
-          {/* CENTER IMAGE */}
-          <Grid2 size={{ xs: 12, md: 4 }}>
+          {/* ── CENTER: Hero Image ── hidden on mobile to avoid clutter ── */}
+          <Grid2
+            size={{ xs: 12, md: 4 }}
+            sx={{ display: { xs: 'none', md: 'block' } }}
+          >
             <Box
               sx={{
                 display: 'flex',
@@ -174,16 +153,9 @@ export default function HeroSection() {
               <Box
                 component="img"
                 src="/images/hero.webp"
-                alt="Hero"
-                
+                alt="Hero illustration"
                 sx={{
-                  width: {
-                    xs: '120%',
-                    sm: '110%',
-                    md: '110%',
-                    lg: '290%',
-                  },
-                   
+                  width: { md: '110%', lg: '290%' },
                   maxWidth: '1250px',
                   height: 'auto',
                   objectFit: 'contain',
@@ -193,7 +165,7 @@ export default function HeroSection() {
             </Box>
           </Grid2>
 
-          {/* RIGHT FORM */}
+          {/* ── RIGHT: Consultation Form ── */}
           <Grid2 size={{ xs: 12, md: 4 }}>
             <Paper
               elevation={0}
@@ -202,17 +174,14 @@ export default function HeroSection() {
               sx={{
                 position: 'relative',
                 zIndex: 3,
-                p: 4,
-                maxWidth: 430,
+                p: { xs: 3, sm: 4 },
+                maxWidth: { xs: '100%', sm: 430 },
                 mx: 'auto',
                 borderRadius: '24px',
-                background:
-                  'rgba(255,255,255,0.9)',
+                background: 'rgba(255,255,255,0.92)',
                 backdropFilter: 'blur(20px)',
-                border:
-                  '1px solid rgba(0,0,0,0.08)',
-                boxShadow:
-                  '0 20px 60px rgba(0,0,0,0.08)',
+                border: '1px solid rgba(0,0,0,0.08)',
+                boxShadow: '0 20px 60px rgba(0,0,0,0.08)',
               }}
             >
               <Typography
@@ -221,6 +190,7 @@ export default function HeroSection() {
                   fontWeight: 700,
                   mb: 1,
                   textAlign: 'center',
+                  fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' },
                 }}
               >
                 Free Consultation
@@ -231,9 +201,10 @@ export default function HeroSection() {
                   textAlign: 'center',
                   color: '#666',
                   mb: 3,
+                  fontSize: { xs: '0.85rem', sm: '1rem' },
                 }}
               >
-                Let discuss your project
+                Let&apos;s discuss your project
               </Typography>
 
               <TextField
@@ -243,24 +214,29 @@ export default function HeroSection() {
                 value={formData.name}
                 onChange={handleChange}
                 margin="normal"
+                size="small"
               />
 
               <TextField
                 fullWidth
                 label="Email Address"
                 name="email"
+                type="email"
                 value={formData.email}
                 onChange={handleChange}
                 margin="normal"
+                size="small"
               />
 
               <TextField
                 fullWidth
                 label="Phone Number"
                 name="phone"
+                type="tel"
                 value={formData.phone}
                 onChange={handleChange}
                 margin="normal"
+                size="small"
               />
 
               <Button
@@ -269,14 +245,13 @@ export default function HeroSection() {
                 variant="contained"
                 sx={{
                   mt: 3,
-                  py: 1.7,
+                  py: { xs: 1.4, md: 1.7 },
                   bgcolor: '#ed3c0a',
                   color: '#051932',
                   fontWeight: 700,
                   borderRadius: 3,
-                  '&:hover': {
-                    bgcolor: '#ed3c0a',
-                  },
+                  fontSize: { xs: '0.9rem', md: '1rem' },
+                  '&:hover': { bgcolor: '#c9330a' },
                 }}
               >
                 Submit
